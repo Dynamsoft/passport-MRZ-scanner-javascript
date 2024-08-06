@@ -47,7 +47,7 @@ Passport MRZ Scanner
 │   ├── ...
 │   └── ...
 ├── js
-│   ├── define.js
+│   ├── const.js
 │   ├── index.js
 │   ├── init.js
 │   └── util.js
@@ -59,7 +59,7 @@ Passport MRZ Scanner
  * `/css` : This directory contains the CSS file(s) used for styling the project.
  * `/font` : This directory contains the font files used in the project.
  * `/js` : This directory contains all the JavaScript files used in the project.
-   * `define.js` : This file contains definitions of certain constants or variables used across the project.
+   * `const.js` : This file contains definitions of certain constants or variables used across the project.
    * `index.js`: This is the main JavaScript file where the core logic of the project is implemented.
    * `init.js` : This file is used for initialization purposes, such as initializing license, load resources, etc.
    * `util.js` : This file contains utility functions that are used across the project.
@@ -103,3 +103,7 @@ The following table is a list of supported browsers based on the above requireme
   <sup>1</sup> devices running iOS needs to be on iOS 14.3+ for camera video streaming to work in Chrome, Firefox or other Apps using webviews.
 
 Apart from the browsers, the operating systems may impose some limitations of their own that could restrict the use of the SDK. Browser compatibility ultimately depends on whether the browser on that particular operating system supports the features listed above.
+
+## Support
+
+If you have any questions, feel free to [contact Dynamsoft support](https://www.dynamsoft.com/company/contact?utm_source=docs&package=js).
