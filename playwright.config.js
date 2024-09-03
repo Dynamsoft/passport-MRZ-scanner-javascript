@@ -27,7 +27,7 @@ export default defineConfig({
     /* Base URL to use in actions like `await page.goto('/')`. */
     baseURL: "http://localhost:3000",
     /* Enable headless mode by default */
-    headless: false,
+    headless: true,
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",
   },
@@ -41,8 +41,8 @@ export default defineConfig({
         launchOptions: {
           args: [
             "--disable-web-security",
-            "--enable-web-rtc"
-            // "--headless=chrome"
+            "--enable-web-rtc",
+            "--headless=chrome"
           ],
         },
         contextOptions: {
