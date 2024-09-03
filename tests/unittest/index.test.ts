@@ -15,12 +15,12 @@ test.beforeEach(async ({ page }) => {
 });
 
 test('License is valid', async ({ page }) => {
-  // Check if license error is displayed
-  const licenseError = await page.evaluate(() => {
-    return cameraEnhancer === undefined;
+  // Check if the demo project is using the correct license
+  const useDemoLicense = await page.evaluate(() => {
+    return Dynamsoft.License.LicenseManager.license == 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
   });
   
-  expect(licenseError).toBeFalsy();
+  expect(useDemoLicense).toBeTruthy();
 });
 
 test('CameraEnhancer is initialized and working', async ({ page }) => {
