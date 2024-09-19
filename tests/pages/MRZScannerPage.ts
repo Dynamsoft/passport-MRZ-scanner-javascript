@@ -48,16 +48,18 @@ export class MRZScannerPage {
    * Close the license related dialog if it shows.
    */
   async closeDialogIfPresent() {
-    try {
-      this.dialogCloseButton.waitFor({ state: "visible", timeout: 5000 });
-      await this.dialogCloseButton.click();    
-    } catch (error) {
-      console.log("Failed to close the dialog: ", error);
-    }
+    // try {
+    //   this.dialogCloseButton.waitFor({ state: "visible", timeout: 5000 });
+    //   await this.dialogCloseButton.click();    
+    // } catch (error) {
+    //   console.log("Failed to close the dialog: ", error);
+    // }
+
+    await this.dialogCloseButton.click();    
   }
 
   async navigateTo() {
-    // await this.grantCameraPermission();
+    await this.grantCameraPermission();
     await this.page.goto(URL);
     await this.closeDialogIfPresent();
   }
