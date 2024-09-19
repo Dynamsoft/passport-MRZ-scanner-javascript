@@ -78,6 +78,10 @@ export class MRZScannerPage {
     // Ensuring the page is loaded after clicked on the Start button
     await this.page.waitForLoadState('networkidle', {timeout: 30000});
     await this.page.waitForLoadState('domcontentloaded', {timeout: 30000});
+    console.log("Evaluating the status of indexedDb");
+    console.log(await this.page.evaluate(() =>{
+      return typeof window.indexedDB
+    }));
   }
 
   async clickscanIDButton() {
