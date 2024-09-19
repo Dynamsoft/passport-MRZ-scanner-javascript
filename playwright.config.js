@@ -72,7 +72,8 @@ export default defineConfig({
             "media.navigator.streams.fake": true, // Use fake streams if needed
             "devtools.debugger.remote-enabled": true,
             "devtools.debugger.prompt-connection": false,
-            "devtools.chrome.enabled": true
+            "devtools.chrome.enabled": true,
+            "datareporting.policy.firstRunURL": ""
           },
         },
       },
