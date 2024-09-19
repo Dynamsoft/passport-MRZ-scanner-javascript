@@ -60,7 +60,7 @@ export default defineConfig({
         ...devices["Desktop Firefox"],
         launchOptions: {
           "devtools": true,
-          "headless": true,
+          "headless": false,
           args: [
             "--use-fake-device-for-media-stream", 
             "--use-fake-ui-for-media-stream", 
