@@ -12,6 +12,7 @@ const URL = '/index.html';
 
 test.beforeEach(async ({ page }) => {
   await page.goto(URL);
+  await page.click('.start-btn');
 });
 
 test('License is valid', async ({ page }) => {
@@ -24,7 +25,6 @@ test('License is valid', async ({ page }) => {
 });
 
 test('CameraEnhancer is initialized and working', async ({ page }) => {
-  await page.click('.start-btn');
   
   // Check if camera view is displayed
   const cameraView = await page.locator('.dce-video-container');
@@ -36,7 +36,6 @@ test('CameraEnhancer is initialized and working', async ({ page }) => {
 });
 
 test('CameraView is initialized and working', async ({ page }) => {
-  await page.click('.start-btn');
   
   // Check if scan region is displayed
   const scanRegion = await page.locator('.dce-scanarea');
