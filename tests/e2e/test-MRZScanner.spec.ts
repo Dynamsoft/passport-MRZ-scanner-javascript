@@ -11,8 +11,8 @@ test.describe("Verify the VIN Scanner Page title and veirfy user can select diff
 
   test.beforeEach(async ({ mrzScannerPage }) => {
     
-    // Mock the camera
-    await mrzScannerPage.grantCameraPermission();
+    // // Mock the camera
+    // await mrzScannerPage.grantCameraPermission();
     
     // Navigate to the VIN Scanner page
     await mrzScannerPage.navigateTo();

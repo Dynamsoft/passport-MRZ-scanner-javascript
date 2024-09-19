@@ -57,7 +57,7 @@ export class MRZScannerPage {
   }
 
   async navigateTo() {
-    await this.grantCameraPermission();
+    // await this.grantCameraPermission();
     await this.page.goto(URL);
     await this.closeDialogIfPresent();
   }
