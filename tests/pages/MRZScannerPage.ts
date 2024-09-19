@@ -59,7 +59,7 @@ export class MRZScannerPage {
   }
 
   async navigateTo() {
-    await this.grantCameraPermission();
+    // await this.grantCameraPermission();
     await this.page.goto(URL);
     await this.closeDialogIfPresent();
   }
@@ -77,7 +77,7 @@ export class MRZScannerPage {
     
     // Ensuring the page is loaded after clicked on the Start button
     await this.page.waitForLoadState('networkidle', {timeout: 30000});
-    await this.page.waitForLoadState('domcontentloaded');
+    await this.page.waitForLoadState('domcontentloaded', {timeout: 30000});
   }
 
   async clickscanIDButton() {
