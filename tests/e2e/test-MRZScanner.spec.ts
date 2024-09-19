@@ -1,7 +1,7 @@
 import { test, expect } from '../fixtures';
 
 // Adding userAgent to avoid firefox headless mode to block the script as it is being detected as bot.
-const userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"; 
+const userAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:130.0) Gecko/20100101 Firefox/130.0"; 
 
 
 test.describe.configure({ mode: 'serial' });
