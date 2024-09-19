@@ -48,9 +48,12 @@ export class MRZScannerPage {
    * Close the license related dialog if it shows.
    */
   async closeDialogIfPresent() {
-    this.dialogCloseButton.waitFor({ state: "visible", timeout: 5000 });
-    await this.dialogCloseButton.click();    
-    
+    try {
+      this.dialogCloseButton.waitFor({ state: "visible", timeout: 5000 });
+      await this.dialogCloseButton.click();    
+    } catch (error) {
+      console.log("Failed to close the dialog: ", error);
+    }
   }
 
   async navigateTo() {
