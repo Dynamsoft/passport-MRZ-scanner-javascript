@@ -49,7 +49,7 @@ export default defineConfig({
         },
         contextOptions: {
           /* Camera permission */
-          permissions: ["camera"],
+          permissions: ["camera", "indexedDB"],
           ignoreHTTPSErrors: true,
         },
       },
@@ -76,6 +76,11 @@ export default defineConfig({
             "datareporting.policy.firstRunURL": ""
           },
         },
+      },
+      contextOptions: {
+        /* Camera permission */
+        permissions: ["camera", "indexedDB"],
+        ignoreHTTPSErrors: true,
       },
     },
     // {
