@@ -43,8 +43,8 @@ export default defineConfig({
             "--disable-web-security",
             "--enable-web-rtc",
             "--headless=chrome",
-            "--use-fake-device-for-media-stream",
-            "--use-fake-ui-for-media-stream"
+            // "--use-fake-device-for-media-stream",
+            // "--use-fake-ui-for-media-stream"
           ],
         },
         contextOptions: {
