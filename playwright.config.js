@@ -49,7 +49,7 @@ export default defineConfig({
         },
         contextOptions: {
           /* Camera permission */
-          permissions: ["camera", "indexedDB"],
+          permissions: ["camera"],
           ignoreHTTPSErrors: true,
         },
       },
@@ -60,7 +60,7 @@ export default defineConfig({
         ...devices["Desktop Firefox"],
         launchOptions: {
           "devtools": true,
-          "headless": false,
+          "headless": true,
           args: [
             "--use-fake-device-for-media-stream", 
             "--use-fake-ui-for-media-stream", 
@@ -79,7 +79,7 @@ export default defineConfig({
       },
       contextOptions: {
         /* Camera permission */
-        permissions: ["camera", "indexedDB"],
+        permissions: ["indexedDB"],
         ignoreHTTPSErrors: true,
       },
     },
