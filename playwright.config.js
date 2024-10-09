@@ -1,11 +1,5 @@
 import { defineConfig, devices } from "@playwright/test";
-
-/**
- * Read environment variables from file.
- * https://github.com/motdotla/dotenv
- */
-// import dotenv from 'dotenv';
-// dotenv.config({ path: path.resolve(__dirname, '.env') });
+import * as path from "path";
 
 /**
  * See https://playwright.dev/docs/test-configuration.
@@ -40,11 +34,12 @@ export default defineConfig({
         ...devices["Desktop Chrome"],
         launchOptions: {
           args: [
-            "--disable-web-security",
-            "--enable-web-rtc",
-            "--headless=chrome",
-            // "--use-fake-device-for-media-stream",
-            // "--use-fake-ui-for-media-stream"
+            // "--disable-web-security",
+            // "--enable-web-rtc",
+            // "--headless=chrome",
+            "--use-fake-device-for-media-stream",
+            // "--use-fake-ui-for-media-stream",
+            `--use-file-for-fake-video-capture=${path.join(__dirname, './tests/video-src/small.y4m')}`,
           ],
         },
         contextOptions: {
@@ -76,11 +71,6 @@ export default defineConfig({
             "datareporting.policy.firstRunURL": ""
           },
         },
-      },
-      contextOptions: {
-        /* Camera permission */
-        permissions: ["indexedDB"],
-        ignoreHTTPSErrors: true,
       },
     },
     // {
