@@ -34,12 +34,12 @@ export default defineConfig({
         ...devices["Desktop Chrome"],
         launchOptions: {
           args: [
-            // "--disable-web-security",
-            // "--enable-web-rtc",
-            // "--headless=chrome",
+            "--disable-web-security",
+            "--enable-web-rtc",
+            "--headless=chrome",
             "--use-fake-device-for-media-stream",
             // "--use-fake-ui-for-media-stream",
-            `--use-file-for-fake-video-capture=${path.join(__dirname, './tests/video-src/small.y4m')}`,
+            `--use-file-for-fake-video-capture=${path.join(__dirname, './tests/video-src/sample.y4m')}`,
           ],
         },
         contextOptions: {
